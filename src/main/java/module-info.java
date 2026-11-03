@@ -5,4 +5,5 @@ module com.example.workshopjavafx {
 
     opens com.example.workshopjavafx to javafx.fxml;
     exports com.example.workshopjavafx;
+    opens com.example.workshopjavafx.gui to javafx.fxml;
 }
