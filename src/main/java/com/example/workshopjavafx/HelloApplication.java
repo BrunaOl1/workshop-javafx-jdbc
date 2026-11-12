@@ -11,11 +11,15 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage primaryStage) {
-        Scene mainScene = new Scene(new MainViewJ());
+    public void start(Stage primaryStage) throws IOException {
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/gui/MainView.fxml")
+        );
+        Parent root = loader.load();
+        Scene mainScene = new Scene(root);
 
         primaryStage.setScene(mainScene);
-        primaryStage.setTitle("Sample JavaFX application");
+        primaryStage.setTitle("Sample JavaFX Application");
         primaryStage.show();
     }
 
