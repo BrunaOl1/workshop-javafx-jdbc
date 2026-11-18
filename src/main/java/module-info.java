@@ -1,6 +1,7 @@
 module com.example.workshopjavafx {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jdk.compiler;
 
 
     opens com.example.workshopjavafx to javafx.fxml;
